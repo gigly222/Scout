@@ -3,8 +3,7 @@
 
 Written in Python - 3.5.2 (~/anaconda3/bin/python)
 You will need to install gdal. As I recall, certain things would only work with certain versions of gdal. I had to install two versions of gdal.
-I installed on my anaconda environment gdal	2.1.0. However, I had to install gdal version 2.1.3 outside of anaconda. You will also
-need Tensorflow and Keras.
+I installed on my anaconda environment gdal	2.1.0. However, I had to install gdal version 2.1.3 outside of anaconda. You will also need Tensorflow and Keras. 
 
 
 First you will need a set of images with their associated shape files. Look for Boston images and Boston Shape files. 
@@ -13,6 +12,7 @@ Your Boston images end in .jp2, your shape files end in .shp
 
 
 # This command converts .jp2 to .tif
+# To get this to work, i made a seperate conda environment with python=2.7 and did conda install -c conda-forge gdal=2.1.3
 1) run command from cmd on a given .jp2 image (Where 19TCG240845.jp2 is the image to be converted to 19TCG240845.tif):
  		gdal_translate -of GTiff -co COMPRESS=JPEG -co TILED=YES 19TCG240845.jp2 19TCG240845.tif
 
